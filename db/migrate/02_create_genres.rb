@@ -1,2 +1,10 @@
 class CreateGenres < ActiveRecord::Migration[4.2]
-end
+    def change
+      create_table :genres do |t|
+        t.string :name
+      end
+    end
+  end 
+
+  #a genre will have many songs
+  #a genre will have many artists through songs
